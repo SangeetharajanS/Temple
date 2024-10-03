@@ -27,3 +27,29 @@ img {
 img:hover {
     border-color: #007BFF;
 }
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    justify-content: center; /* Center the images in the gallery */
+}
+
+#gallery img {
+    max-width: calc(33% - 10px); /* Adjust the width for 3 images per row, accounting for gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+@media (max-width: 900px) {
+    #gallery img {
+        max-width: calc(50% - 10px); /* Adjust for 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    #gallery img {
+        max-width: 100%; /* Full width for 1 image per row on mobile */
+    }
+}
+
